@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# a bash script to ensure nginx config link corresponds
+# to the actual config file.
+# ... as a measure of debugging why nginx won't listen on port 80
+
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
