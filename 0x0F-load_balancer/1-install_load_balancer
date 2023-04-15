@@ -9,5 +9,5 @@ apt-get -y update
 apt-get -y install haproxy
 
 sed -i -e '$aENABLED=1\n' /etc/default/haproxy
-sed -i -e '$a\listen balancer\n\tbind :80\n\tbalance roundrobin\n\tserver 64466-web-01 54.237.15.115 check port 3200\n\tserver 64466-web-02 100.26.172.246 check port 3201 backup\n' /etc/haproxy/haproxy.cfg
+sed -i -e '$a\listen balancer\n\tbind :80\n\tbalance roundrobin\n\tserver 64466-web-01 34.229.254.249:80 check\n\tserver 64466-web-02 54.162.96.240:80 check\n' /etc/haproxy/haproxy.cfg
 service haproxy restart
