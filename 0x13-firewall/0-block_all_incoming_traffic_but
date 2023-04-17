@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# steps to install and configure ufw to block
+# all incoming traffic execpt
+# ssh, http and https
+
+sudo apt-get install ufw
+sudo ufw allow ssh
+sudo ufw allow https
+sudo ufw allow http
+ufw enable
