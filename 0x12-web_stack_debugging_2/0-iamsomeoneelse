@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# a bash script that that switches user
+# ... and prints out the user using the whoami program
+
+sudo -u "$1" whoami
